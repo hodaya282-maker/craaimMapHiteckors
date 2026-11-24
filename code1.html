@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface":"#0f131c","on-secondary-fixed":"#131b2e","tertiary":"#56e5a9","error":"#ffb4ab","on-surface-variant":"#bdc8d1","tertiary-container":"#30c88f","on-background":"#dfe2ef","inverse-surface":"#dfe2ef","surface-tint":"#7bd0ff","secondary":"#bec6e0","surface-bright":"#353943","outline":"#87929a","primary-container":"#38bdf8","on-secondary-container":"#adb4ce","surface-variant":"#31353f","secondary-fixed":"#dae2fd","on-tertiary-container":"#004e34","primary":"#8ed5ff","error-container":"#93000a","outline-variant":"#3e484f","primary-fixed-dim":"#7bd0ff","on-primary":"#00354a","surface-dim":"#0f131c","on-tertiary-fixed-variant":"#005236","on-primary-fixed-variant":"#004c69","on-primary-container":"#004965","on-secondary-fixed-variant":"#3f465c","tertiary-fixed":"#6ffbbe","on-primary-fixed":"#001e2c","surface-container-lowest":"#0a0e17","on-error-container":"#ffdad6","background":"#0f131c","surface-container":"#1c1f29","on-tertiary":"#003824","surface-container-low":"#181b25","primary-fixed":"#c4e7ff","inverse-on-surface":"#2c303a","on-surface":"#dfe2ef","on-tertiary-fixed":"#002113","surface-container-high":"#262a34","secondary-container":"#3f465c","secondary-fixed-dim":"#bec6e0","tertiary-fixed-dim":"#4edea3","inverse-primary":"#00668a","surface-container-highest":"#31353f","on-secondary":"#283044","on-error":"#690005"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-sm":"0.5rem","margin-desktop":"1.5rem","gutter-lg":"1.5rem","margin":"1rem","margin-mobile":"0.75rem","space-xl":"1.5rem","space-lg":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-md":"0.75rem","gutter":"1rem"},fontFamily:{"body-sm":["Rubik"],"display-lg-mobile":["Rubik"],"label-sm":["Rubik"],"headline-md":["Rubik"],"headline-sm":["Rubik"],"display-lg":["Rubik"],"label-md":["Rubik"],"body-lg":["Rubik"],"headline-lg":["Rubik"],"label-lg":["Rubik"],"body-md":["Rubik"]},fontSize:{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg-mobile":["26px",{"lineHeight":"34px","fontWeight":"700"}],"label-sm":["10px",{"lineHeight":"12px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"label-md":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"600"}],"label-lg":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface select-none"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.6)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md shrink-0"><img alt="GIS PolNet 3D Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrCy8WTyhdubn-moXp4JGmVAOq9dNalneo2aLrewHDFw04aPekS7CFgaNahzIbWF9x1u8vBiKWgyS0ZHt0MYFxMw96Tc9dYyeAzLu5gy281u8R-fVmSMMn2E--JBnqM4MtQxr5P8YjaGK_a-WsB96dj2f7_4UynSwx-fB5YoZ7aT7kH8O6lrgTMvSWQXR9UN9GEE7ALXrtKrO7EFNP_3kgGmRGlm32aW6Zg4E6UgKSCm"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">מערכת מנב״ט 3D | מרכז שליטה וניתוח נתוני פשיעה 2025</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-primary-container/20 text-primary-container border border-primary-container/30 uppercase">מאגר פתוח משטרת ישראל - סיווג מבצעי</span><span class="font-label-sm text-label-sm text-on-surface-variant">| חטיבת מודיעין</span></div></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low p-space-xs rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.4)]" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a aria-current="page" class="px-space-md py-1.5 rounded-lg flex items-center gap-space-xs transition-colors bg-primary-container text-on-primary-container font-headline-sm" data-path="3d-map-regional-investigation" href="#">מפה תלת-ממדית ותחקור אזורי<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-primary">3D-GIS</span></a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-space-md py-1.5 rounded-lg font-headline-sm text-headline-sm flex items-center gap-space-xs transition-colors" data-path="national-trends-intelligence-dashboard" href="#">דשבורד מגמות ומודיעין ארצי<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-tertiary">LIVE</span></a><a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-space-md py-1.5 rounded-lg font-headline-sm text-headline-sm flex items-center gap-space-xs transition-colors" data-path="cross-regional-comparison-studio" href="#">סטודיו השוואת אזורים ראש-בראש<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-highest text-secondary">A/B</span></a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden md:flex items-center bg-surface-container-low p-0.5 rounded-lg border border-outline-variant/30"><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-surface-container-high text-primary shadow-sm" type="button">עבירות (13,568)</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">תיקים (13,357)</button></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary-container/10 border border-tertiary-container/30"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-md text-label-md text-tertiary">נתוני 2025 מלאים</span></div><div class="hidden sm:flex items-center gap-space-xs"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" type="button"><span class="material-symbols-outlined text-sm">download</span>ייצוא (CSV/PNG)</button></div><div class="flex items-center gap-space-sm pr-space-xs border-r border-outline-variant/40"><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">רס״ר עידו לוי</span><span class="font-label-sm text-label-sm text-tertiary flex items-center justify-end gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>מחובר - מאובטח</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuDLTuuEHna21rk6b-Dx2MdVLMlaqgep4u3DCaTDlO9-hqWcIrvPq1QHsL4nHtjdrU_CdyJ9jz3drgWcZRwSdBqMu54SzZ2y6LZStClfSwg19BucBD092_54sbdQN42W1Cc0II53YS8XUXGBeb2a_9Ex7Dpnwh3yYIajD1ICKJAVbJen6BdNMXzlRkcN_FoCs86wiuixs3p1DOT2ahGI7k7gGQcjqHW1eX4kFkPQQ"/></div></div></div></header><aside class="fixed right-0 top-16 bottom-7 w-64 bg-surface-container-lowest/80 backdrop-blur-md z-40 flex flex-col py-space-md shadow-[-1px_0_12px_rgba(0,0,0,0.5)]"><div class="px-space-md mb-space-md flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">שכבות וניטור מבצעי</span><span class="material-symbols-outlined text-sm text-outline">tune</span></div><nav class="flex-1 px-space-xs space-y-1" data-active-classes="bg-surface-container-high text-primary font-bold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-surface-container-high text-primary font-bold" data-path="3d-map-regional-investigation" href="#"><span class="material-symbols-outlined text-base text-primary-container">layers</span>שכבות פשיעה תלת-ממדיות</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="national-trends-intelligence-dashboard" href="#"><span class="material-symbols-outlined text-base text-tertiary">analytics</span>מדדי פשיעה ומגמות ארציות</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="cross-regional-comparison-studio" href="#"><span class="material-symbols-outlined text-base text-secondary">compare_arrows</span>מנוע השוואת מרחבים ותחנות</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="spatial-hotspots-telemetry" href="#"><span class="material-symbols-outlined text-base text-error">format_h4</span>מוקדי חום ופוליגונים חריגים</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="temporal-crime-patterns" href="#"><span class="material-symbols-outlined text-base text-primary">schedule</span>התפלגות יממתית ועונתית</a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-body-md text-body-md transition-colors" data-path="tactical-incident-roster" href="#"><span class="material-symbols-outlined text-base text-outline">format_list_bulleted</span>יומן אירועים ותיקי חקירה</a></nav><div class="px-space-md pt-space-sm mt-auto border-t border-outline-variant/30 flex flex-col gap-space-xs"><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>חיבור שרת PolNet:</span><span class="text-tertiary font-mono">מוצפן TLS 1.3</span></div><div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span>דיוק רשת GIS:</span><span class="text-primary font-mono">RTK 99.8%</span></div></div></aside><div class="pr-64"><main class="relative w-full pt-16 pb-8 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full relative h-[calc(100vh-4rem-1.75rem)] overflow-hidden font-body-md select-none bg-surface-container-lowest text-on-surface">
+<!-- TOP FLOATING TACTICAL COMMAND BAR -->
+<div class="absolute top-3 inset-x-4 z-30 flex flex-wrap items-center justify-between gap-space-sm pointer-events-none">
+<!-- Search Bar & Perspective Mode Switcher -->
+<div class="flex items-center gap-space-sm pointer-events-auto bg-surface/90 backdrop-blur-xl px-space-md py-1.5 rounded-xl shadow-xl border border-outline-variant/30">
+<div class="relative flex items-center w-80">
+<span class="material-symbols-outlined absolute right-2.5 text-primary text-lg">search</span>
+<input class="w-full bg-surface-container-lowest/80 text-on-surface text-body-sm font-body-sm pr-9 pl-3 py-1.5 rounded-lg border border-outline-variant/40 focus:border-primary-container focus:outline-none transition-all placeholder:text-on-surface-variant/60" id="mapSearchInput" placeholder="חיפוש עיר, שכונה, מועצה או תחנה... (נתניה, יפו, לוד)" type="text" value="נתניה - מרכז העיר / בן ציון"/>
+<button class="absolute left-2 text-on-surface-variant hover:text-on-surface text-xs" title="איפוס" type="button">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<!-- Municipal vs Police Division Segmented Tabs -->
+<div class="flex items-center bg-surface-container-low p-0.5 rounded-lg text-label-sm font-label-sm">
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-bold shadow-sm transition-all flex items-center gap-1" id="viewMunicipalBtn" type="button">
+<span class="material-symbols-outlined text-xs">apartment</span>
+<span>מוניציפלי (224 רשויות)</span>
+</button>
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="viewPoliceBtn" type="button">
+<span class="material-symbols-outlined text-xs">local_police</span>
+<span>משטרתי (8 מחוזות ומרחבים)</span>
+</button>
+</div>
+</div>
+<!-- Severity Filter Chips & Status Indicator -->
+<div class="flex items-center gap-space-xs pointer-events-auto bg-surface/90 backdrop-blur-xl px-space-md py-1.5 rounded-xl shadow-xl border border-outline-variant/30">
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">סינון חומרה:</span>
+<button class="px-2 py-0.5 rounded-md text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant hover:text-primary transition-all">הכל (13,568)</button>
+<button class="px-2 py-0.5 rounded-md text-label-sm font-label-sm bg-pink-500/20 text-[#EC4899] border border-[#EC4899]/40 flex items-center gap-1 font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#EC4899] animate-ping"></span>
+        חריג קיצוני (7)
+      </button>
+<button class="px-2 py-0.5 rounded-md text-label-sm font-label-sm bg-error/20 text-error border border-error/40 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        גבוה (24)
+      </button>
+<button class="px-2 py-0.5 rounded-md text-label-sm font-label-sm bg-amber-400/15 text-amber-400 border border-amber-400/30">
+        בינוני (88)
+      </button>
+<button class="px-2 py-0.5 rounded-md text-label-sm font-label-sm bg-tertiary/15 text-tertiary border border-tertiary/30">
+        שגרתי (105)
+      </button>
+</div>
+</div>
+<!-- MAIN 3D TACTICAL MAP VIEWPORT (CANVAS CONTAINER) -->
+<div class="relative w-full flex-1 h-full bg-[#070b13] overflow-hidden cursor-grab active:cursor-grabbing" id="deckgl-map-container">
+<!-- SVG Synthesized 3D GIS Canvas with Isometric Hexagonal Columns & Heat Polygons -->
+<svg class="w-full h-full object-cover select-none pointer-events-auto" preserveaspectratio="xMidYMid slice" viewbox="0 0 1600 950" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Isometric and Perspective Gradients -->
+<lineargradient id="mapGridGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#182338" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#0a0f1d" stop-opacity="0.95"></stop>
+</lineargradient>
+<lineargradient id="columnGradPink" x1="0%" x2="0%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#93000a" stop-opacity="0.3"></stop>
+<stop offset="50%" stop-color="#EC4899" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#ff70ba" stop-opacity="1"></stop>
+</lineargradient>
+<lineargradient id="columnGradRed" x1="0%" x2="0%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#3b0709" stop-opacity="0.4"></stop>
+<stop offset="70%" stop-color="#ef4444" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#fca5a5" stop-opacity="1"></stop>
+</lineargradient>
+<lineargradient id="columnGradAmber" x1="0%" x2="0%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#3d2a00" stop-opacity="0.3"></stop>
+<stop offset="70%" stop-color="#f59e0b" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#fef08a" stop-opacity="0.95"></stop>
+</lineargradient>
+<lineargradient id="columnGradEmerald" x1="0%" x2="0%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#022c22" stop-opacity="0.3"></stop>
+<stop offset="80%" stop-color="#10b981" stop-opacity="0.75"></stop>
+<stop offset="100%" stop-color="#6ee7b7" stop-opacity="0.95"></stop>
+</lineargradient>
+<lineargradient id="cyanBeamGrad" x1="0%" x2="0%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#0284c7" stop-opacity="0.1"></stop>
+<stop offset="80%" stop-color="#38bdf8" stop-opacity="0.7"></stop>
+<stop offset="100%" stop-color="#e0f2fe" stop-opacity="1"></stop>
+</lineargradient>
+<radialgradient cx="50%" cy="50%" id="hotspotGlowPink" r="50%">
+<stop offset="0%" stop-color="#EC4899" stop-opacity="0.6"></stop>
+<stop offset="50%" stop-color="#EC4899" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#EC4899" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="50%" cy="50%" id="hotspotGlowRed" r="50%">
+<stop offset="0%" stop-color="#ef4444" stop-opacity="0.5"></stop>
+<stop offset="60%" stop-color="#ef4444" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#ef4444" stop-opacity="0"></stop>
+</radialgradient>
+<filter height="160%" id="tacticalGlow" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="8"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Tilted 3D Map Ground Plane with Spatial Coordinate Grid -->
+<g id="ground-plane" transform="perspective(900) rotateX(46deg) rotateZ(-12deg) translate(80, -220) scale(1.18)">
+<!-- Deep Sea & Coastline Vector Mesh -->
+<rect fill="url(#mapGridGrad)" height="1600" width="2400" x="-400" y="-300"></rect>
+<!-- High-density geospatial coordinate grid lines -->
+<g stroke="#38bdf8" stroke-dasharray="2,6" stroke-opacity="0.08">
+<line x1="0" x2="1600" y1="0" y2="0"></line>
+<line x1="0" x2="1600" y1="150" y2="150"></line>
+<line x1="0" x2="1600" y1="300" y2="300"></line>
+<line x1="0" x2="1600" y1="450" y2="450"></line>
+<line x1="0" x2="1600" y1="600" y2="600"></line>
+<line x1="0" x2="1600" y1="750" y2="750"></line>
+<line x1="0" x2="1600" y1="900" y2="900"></line>
+<line x1="0" x2="1600" y1="1050" y2="1050"></line>
+<line x1="200" x2="200" y1="-200" y2="1200"></line>
+<line x1="400" x2="400" y1="-200" y2="1200"></line>
+<line x1="600" x2="600" y1="-200" y2="1200"></line>
+<line x1="800" x2="800" y1="-200" y2="1200"></line>
+<line x1="1000" x2="1000" y1="-200" y2="1200"></line>
+<line x1="1200" x2="1200" y1="-200" y2="1200"></line>
+</g>
+<!-- Israel Land Contour Polygon Outline -->
+<path d="M 680,80 L 740,110 L 790,160 L 810,240 L 770,300 L 760,390 L 740,440 L 730,520 L 720,620 L 700,740 L 680,850 L 670,980 L 640,1050 L 610,950 L 590,830 L 560,740 L 530,680 L 570,590 L 610,510 L 640,430 L 650,330 L 660,210 Z" fill="#101827" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1.5"></path>
+<!-- District Boundaries Overlay (Mesh) -->
+<!-- Northern District -->
+<path d="M 680,80 L 790,160 L 770,270 L 660,230 Z" fill="#38bdf8" fill-opacity="0.04" stroke="#38bdf8" stroke-dasharray="4,4" stroke-opacity="0.4" stroke-width="1"></path>
+<!-- Central / Sharon District -->
+<path d="M 660,230 L 760,270 L 750,380 L 645,360 Z" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.2"></path>
+<!-- Tel Aviv Metropolitan -->
+<path d="M 645,360 L 690,365 L 685,420 L 640,410 Z" fill="#EC4899" fill-opacity="0.12" stroke="#EC4899" stroke-opacity="0.7" stroke-width="1.2"></path>
+<!-- Jerusalem District -->
+<path d="M 690,370 L 760,390 L 750,490 L 690,470 Z" fill="#f59e0b" fill-opacity="0.07" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"></path>
+<!-- Southern District -->
+<path d="M 640,430 L 740,510 L 680,850 L 670,980 L 610,950 L 570,680 Z" fill="#38bdf8" fill-opacity="0.04" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1"></path>
+<!-- HEATMAP DIFFUSE GLOW BLOBS ON MAP BED -->
+<!-- Tel Aviv Hub -->
+<circle cx="660" cy="385" fill="url(#hotspotGlowPink)" filter="url(#tacticalGlow)" r="95"></circle>
+<!-- Netanya Hub -->
+<circle cx="665" cy="315" fill="url(#hotspotGlowPink)" filter="url(#tacticalGlow)" r="85"></circle>
+<!-- Lod - Ramla Hub -->
+<circle cx="685" cy="425" fill="url(#hotspotGlowRed)" filter="url(#tacticalGlow)" r="70"></circle>
+<!-- Jerusalem Hub -->
+<circle cx="725" cy="440" fill="url(#hotspotGlowRed)" filter="url(#tacticalGlow)" r="75"></circle>
+<!-- Ashdod - Ashkelon Hub -->
+<circle cx="630" cy="495" fill="url(#hotspotGlowRed)" filter="url(#tacticalGlow)" r="70"></circle>
+<!-- Be'er Sheva Hub -->
+<circle cx="650" cy="620" fill="url(#hotspotGlowRed)" filter="url(#tacticalGlow)" r="75"></circle>
+<!-- Haifa Port Hub -->
+<circle cx="675" cy="190" fill="url(#hotspotGlowRed)" filter="url(#tacticalGlow)" r="65"></circle>
+<!-- Eilat Hub -->
+<circle cx="670" cy="980" fill="url(#hotspotGlowPink)" filter="url(#tacticalGlow)" r="50"></circle>
+<!-- 3D EXTRUDED HEXAGONS & CYLINDERS (Deck.gl Style HexagonLayer) -->
+<!-- 1. NETANYA (Active Target Drilldown - Height 210px, Hexagonal Prism) -->
+<g class="cursor-pointer group" id="hotspot-netanya" onclick="focusHotspot('נתניה')">
+<!-- Footprint ring -->
+<polygon fill="none" filter="url(#tacticalGlow)" points="665,302 682,310 682,328 665,336 648,328 648,310" stroke="#EC4899" stroke-opacity="0.9" stroke-width="2"></polygon>
+<polygon fill="none" points="665,296 690,307 690,332 665,343 640,332 640,307" stroke="#EC4899" stroke-dasharray="3,3" stroke-opacity="0.6" stroke-width="1"></polygon>
+<!-- Extruded Prism Faces -->
+<!-- Right Face -->
+<polygon fill="url(#columnGradPink)" opacity="0.85" points="665,336 682,328 682,128 665,136"></polygon>
+<!-- Left Face -->
+<polygon fill="url(#columnGradPink)" opacity="0.95" points="648,328 665,336 665,136 648,128"></polygon>
+<!-- Top Cap (Brilliant White/Cyan Glow) -->
+<polygon fill="#ffffff" filter="url(#tacticalGlow)" points="665,102 682,110 682,128 665,136 648,128 648,110" stroke="#EC4899" stroke-width="1.5"></polygon>
+<!-- Tactical Pulsing Pillar Beam -->
+<line filter="url(#tacticalGlow)" opacity="0.9" stroke="#EC4899" stroke-dasharray="4,2" stroke-width="2" x1="665" x2="665" y1="102" y2="40"></line>
+<!-- Dynamic Floating HUD Label -->
+<g transform="translate(665, 30)">
+<rect fill="#090D16" fill-opacity="0.92" height="24" rx="4" stroke="#EC4899" stroke-width="1.2" width="140" x="-70" y="-22"></rect>
+<circle cx="56" cy="-10" fill="#EC4899" r="3.5"></circle>
+<text fill="#ffffff" font-family="Rubik" font-size="11" font-weight="700" text-anchor="end" x="44" y="-6">נתניה (מרכז)</text>
+<text fill="#EC4899" font-family="Rubik" font-size="11" font-weight="800" text-anchor="start" x="-60" y="-6">842</text>
+</g>
+</g>
+<!-- 2. TEL AVIV - JAFFA (Mega Column - Height 260px) -->
+<g class="cursor-pointer group" id="hotspot-telaviv">
+<polygon fill="none" points="660,370 680,380 680,400 660,410 640,400 640,380" stroke="#EC4899" stroke-width="1.5"></polygon>
+<polygon fill="url(#columnGradPink)" opacity="0.8" points="660,410 680,400 680,140 660,150"></polygon>
+<polygon fill="url(#columnGradPink)" opacity="0.95" points="640,400 660,410 660,150 640,140"></polygon>
+<polygon fill="#ffffff" points="660,120 680,130 680,140 660,150 640,140 640,130" stroke="#EC4899" stroke-width="1.5"></polygon>
+<!-- Label -->
+<g transform="translate(660, 95)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#EC4899" stroke-width="1" width="130" x="-65" y="-18"></rect>
+<circle cx="50" cy="-8" fill="#EC4899" r="3"></circle>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="40" y="-5">תל אביב-יפו</text>
+<text fill="#EC4899" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-55" y="-5">1,420</text>
+</g>
+</g>
+<!-- 3. JERUSALEM (High Column - Height 190px) -->
+<g class="cursor-pointer group" id="hotspot-jerusalem">
+<polygon fill="none" points="725,430 742,438 742,454 725,462 708,454 708,438" stroke="#ef4444" stroke-width="1.2"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.85" points="725,462 742,454 742,264 725,272"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.95" points="708,454 725,462 725,272 708,264"></polygon>
+<polygon fill="#fee2e2" points="725,246 742,254 742,264 725,272 708,264 708,254" stroke="#ef4444" stroke-width="1.2"></polygon>
+<g transform="translate(725, 225)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#ef4444" stroke-width="1" width="110" x="-55" y="-18"></rect>
+<circle cx="43" cy="-8" fill="#ef4444" r="3"></circle>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="35" y="-5">ירושלים</text>
+<text fill="#ef4444" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-48" y="-5">912</text>
+</g>
+</g>
+<!-- 4. LOD / RAMLA (Extreme Hotspot - Height 175px) -->
+<g class="cursor-pointer group" id="hotspot-lod">
+<polygon fill="none" points="685,420 700,427 700,442 685,449 670,442 670,427" stroke="#ef4444" stroke-width="1"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.85" points="685,449 700,442 700,267 685,274"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.95" points="670,442 685,449 685,274 670,267"></polygon>
+<polygon fill="#fca5a5" points="685,252 700,259 700,267 685,274 670,267 670,259" stroke="#ef4444" stroke-width="1"></polygon>
+<g transform="translate(685, 235)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#ef4444" stroke-width="1" width="96" x="-48" y="-18"></rect>
+<circle cx="38" cy="-8" fill="#ef4444" r="2.5"></circle>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="30" y="-5">לוד</text>
+<text fill="#ef4444" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-40" y="-5">694</text>
+</g>
+</g>
+<!-- 5. ASHDOD (High Column - Height 150px) -->
+<g class="cursor-pointer group" id="hotspot-ashdod">
+<polygon fill="none" points="630,490 645,497 645,512 630,519 615,512 615,497" stroke="#ef4444" stroke-width="1"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.85" points="630,519 645,512 645,362 630,369"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.95" points="615,512 630,519 630,369 615,362"></polygon>
+<polygon fill="#fee2e2" points="630,347 645,354 645,362 630,369 615,362 615,354" stroke="#ef4444" stroke-width="1"></polygon>
+<g transform="translate(630, 330)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#ef4444" stroke-width="1" width="96" x="-48" y="-18"></rect>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="30" y="-5">אשדוד</text>
+<text fill="#ef4444" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-40" y="-5">538</text>
+</g>
+</g>
+<!-- 6. BE'ER SHEVA (Height 165px) -->
+<g class="cursor-pointer group" id="hotspot-beersheva">
+<polygon fill="none" points="650,615 666,623 666,639 650,647 634,639 634,623" stroke="#ef4444" stroke-width="1"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.85" points="650,647 666,639 666,474 650,482"></polygon>
+<polygon fill="url(#columnGradRed)" opacity="0.95" points="634,639 650,647 650,482 634,474"></polygon>
+<polygon fill="#fee2e2" points="650,458 666,466 666,474 650,482 634,474 634,466" stroke="#ef4444" stroke-width="1"></polygon>
+<g transform="translate(650, 440)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#ef4444" stroke-width="1" width="112" x="-56" y="-18"></rect>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="36" y="-5">באר שבע</text>
+<text fill="#ef4444" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-48" y="-5">682</text>
+</g>
+</g>
+<!-- 7. HAIFA (Height 140px) -->
+<g class="cursor-pointer group" id="hotspot-haifa">
+<polygon fill="none" points="675,185 690,192 690,207 675,214 660,207 660,192" stroke="#f59e0b" stroke-width="1"></polygon>
+<polygon fill="url(#columnGradAmber)" opacity="0.85" points="675,214 690,207 690,74 675,81"></polygon>
+<polygon fill="url(#columnGradAmber)" opacity="0.95" points="660,207 675,214 675,81 660,74"></polygon>
+<polygon fill="#fef08a" points="675,60 690,67 690,74 675,81 660,74 660,67" stroke="#f59e0b" stroke-width="1"></polygon>
+<g transform="translate(675, 45)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#f59e0b" stroke-width="1" width="92" x="-46" y="-18"></rect>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="28" y="-5">חיפה</text>
+<text fill="#f59e0b" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-38" y="-5">478</text>
+</g>
+</g>
+<!-- 8. EILAT (Height 120px) -->
+<g class="cursor-pointer group" id="hotspot-eilat">
+<polygon fill="none" points="670,975 683,982 683,995 670,1002 657,995 657,982" stroke="#EC4899" stroke-width="1"></polygon>
+<polygon fill="url(#columnGradPink)" opacity="0.85" points="670,1002 683,995 683,875 670,882"></polygon>
+<polygon fill="url(#columnGradPink)" opacity="0.95" points="657,995 670,1002 670,882 657,875"></polygon>
+<polygon fill="#ffffff" points="670,865 683,872 683,875 670,882 657,875 657,872" stroke="#EC4899" stroke-width="1"></polygon>
+<g transform="translate(670, 850)">
+<rect fill="#090D16" fill-opacity="0.9" height="20" rx="3" stroke="#EC4899" stroke-width="1" width="84" x="-42" y="-18"></rect>
+<text fill="#ffffff" font-family="Rubik" font-size="10" font-weight="600" text-anchor="end" x="24" y="-5">אילת</text>
+<text fill="#EC4899" font-family="Rubik" font-size="10" font-weight="700" text-anchor="start" x="-34" y="-5">390</text>
+</g>
+</g>
+<!-- Secondary Ambient Polygons / Cluster Columns (Galilee, Sharon Rural, Negev Bedouin Towns) -->
+<!-- Nazareth/Afula -->
+<polygon fill="#f59e0b" opacity="0.7" points="720,200 730,205 730,215 720,220 710,215 710,205"></polygon>
+<line opacity="0.75" stroke="#f59e0b" stroke-width="6" x1="720" x2="720" y1="220" y2="160"></line>
+<!-- Petah Tikva -->
+<polygon fill="#ef4444" opacity="0.7" points="680,360 690,365 690,375 680,380 670,375 670,365"></polygon>
+<line opacity="0.75" stroke="#ef4444" stroke-width="6" x1="680" x2="680" y1="380" y2="290"></line>
+<!-- Rishon LeZion -->
+<polygon fill="#f59e0b" opacity="0.7" points="655,420 665,425 665,435 655,440 645,435 645,425"></polygon>
+<line opacity="0.75" stroke="#f59e0b" stroke-width="6" x1="655" x2="655" y1="440" y2="350"></line>
+<!-- Hadera -->
+<polygon fill="#10b981" opacity="0.7" points="668,265 676,269 676,277 668,281 660,277 660,269"></polygon>
+<line opacity="0.8" stroke="#10b981" stroke-width="5" x1="668" x2="668" y1="281" y2="235"></line>
+<!-- Tiberias -->
+<polygon fill="#10b981" opacity="0.7" points="760,180 768,184 768,192 760,196 752,192 752,184"></polygon>
+<line opacity="0.8" stroke="#10b981" stroke-width="5" x1="760" x2="760" y1="196" y2="150"></line>
+<!-- Dimona -->
+<polygon fill="#10b981" opacity="0.7" points="695,660 703,664 703,672 695,676 687,672 687,664"></polygon>
+<line opacity="0.8" stroke="#10b981" stroke-width="5" x1="695" x2="695" y1="676" y2="630"></line>
+</g>
+</svg>
+<!-- FLOATING MAP CONTROLS & 3D PERSPECTIVE WIDGET (Bottom Right) -->
+<div class="absolute bottom-6 right-4 z-20 flex flex-col gap-2">
+<!-- Layer Switcher Panel -->
+<div class="bg-surface/90 backdrop-blur-xl p-1.5 rounded-xl shadow-xl border border-outline-variant/30 flex flex-col gap-1 text-label-sm font-label-sm">
+<button class="flex items-center justify-between gap-3 px-2 py-1.5 rounded-lg bg-surface-container-high text-primary font-bold" id="toggle3DColumns" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">view_in_ar</span>
+<span>עמודות 3D ומוקדים</span>
+</span>
+<span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_6px_#38bdf8]"></span>
+</button>
+<button class="flex items-center justify-between gap-3 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="toggleHeatmap" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">gradient</span>
+<span>מפת חום פוליגונים</span>
+</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</button>
+<button class="flex items-center justify-between gap-3 px-2 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="toggleBoundaries" type="button">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">polyline</span>
+<span>גבולות מחוזות ותחנות</span>
+</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</button>
+</div>
+<!-- 3D Camera Controls Group -->
+<div class="bg-surface/90 backdrop-blur-xl p-1 rounded-xl shadow-xl border border-outline-variant/30 flex flex-col items-center gap-1">
+<!-- Tilt 60° / 2D Toggle -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" id="btnTiltToggle" title="הטיית זווית 60° תלת-ממד" type="button">
+<span class="material-symbols-outlined text-base">3d_rotation</span>
+</button>
+<!-- 360° Rotation Trigger -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" id="btnRotate360" title="סיבוב מצלמה 360°" type="button">
+<span class="material-symbols-outlined text-base">sync</span>
+</button>
+<div class="w-5 h-px bg-outline-variant/30"></div>
+<!-- Zoom In -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" id="btnZoomIn" title="התקרבות (+)" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+<!-- Zoom Out -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" id="btnZoomOut" title="התרחקות (-)" type="button">
+<span class="material-symbols-outlined text-base">remove</span>
+</button>
+<!-- Compass North Reset -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-error hover:bg-surface-container-high transition-colors relative" id="btnResetNorth" title="איפוס צפון גיאוגרפי" type="button">
+<span class="material-symbols-outlined text-base">explore</span>
+<span class="absolute -top-0.5 text-[8px] font-mono font-bold text-error">N</span>
+</button>
+</div>
+</div>
+<!-- MAP SEVERITY LEGEND HUD (Bottom Center) -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 bg-surface/90 backdrop-blur-xl px-space-md py-1.5 rounded-full shadow-xl border border-outline-variant/30 flex items-center gap-space-md text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-medium">עצימות אירועים (סרגל חום 2025):</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface">נמוך (0-150)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+<span class="text-on-surface">בינוני (151-400)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-on-surface">גבוה (401-700)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EC4899] shadow-[0_0_8px_#EC4899]"></span>
+<span class="text-on-surface font-bold">חריג קיצוני (700+)</span>
+</div>
+</div>
+</div>
+<!-- COLLAPSIBLE FLOATING TACTICAL FILTER PANEL (Pinned Right, Under App Shell Sidebar) -->
+<aside class="absolute top-16 right-4 z-20 w-72 max-h-[calc(100vh-8.5rem)] flex flex-col bg-surface/92 backdrop-blur-2xl rounded-2xl shadow-2xl border border-outline-variant/30 overflow-hidden transition-all duration-300" id="tacticalFilterPanel">
+<!-- Panel Header with Collapse Toggle -->
+<div class="px-space-md py-2.5 bg-surface-container/60 border-b border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-base">filter_alt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">סינון מבצעי מרובד</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary-container font-mono">13,568 רשומות</span>
+</div>
+<div class="flex-1 overflow-y-auto p-space-md space-y-3.5 scrollbar-thin">
+<!-- 1. Quarter Selector Tabs -->
+<div class="space-y-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">חתך רבעוני 2025</span>
+<div class="grid grid-cols-5 gap-1 bg-surface-container-low p-1 rounded-xl">
+<button class="py-1 rounded-lg text-label-sm font-label-sm bg-primary text-on-primary font-bold shadow-sm" type="button">הכל</button>
+<button class="py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Q1</button>
+<button class="py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Q2</button>
+<button class="py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Q3</button>
+<button class="py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface" type="button">Q4</button>
+</div>
+</div>
+<!-- 2. Crime Group Multi-Select List -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">קבוצות עבירה ראשיות</span>
+<button class="text-label-sm font-label-sm text-primary hover:underline" type="button">סמן הכל</button>
+</div>
+<div class="space-y-1">
+<!-- Item 1 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="text-body-sm font-body-sm text-on-surface">עבירות כלפי הרכוש</span>
+</div>
+<span class="font-mono text-label-sm text-primary font-semibold">4,892</span>
+</label>
+<!-- Item 2 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+<span class="text-body-sm font-body-sm text-on-surface">סדר ציבורי</span>
+</div>
+<span class="font-mono text-label-sm text-amber-400 font-semibold">3,114</span>
+</label>
+<!-- Item 3 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="text-body-sm font-body-sm text-on-surface">עבירות נגד גוף</span>
+</div>
+<span class="font-mono text-label-sm text-error font-semibold">2,450</span>
+</label>
+<!-- Item 4 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="text-body-sm font-body-sm text-on-surface">מרמה והונאה</span>
+</div>
+<span class="font-mono text-label-sm text-tertiary font-semibold">1,230</span>
+</label>
+<!-- Item 5 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-[#EC4899]"></span>
+<span class="text-body-sm font-body-sm text-on-surface">עבירות מין</span>
+</div>
+<span class="font-mono text-label-sm text-[#EC4899] font-semibold">842</span>
+</label>
+<!-- Item 6 -->
+<label class="flex items-center justify-between p-1.5 rounded-lg bg-surface-container/40 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-outline-variant text-primary focus:ring-0" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-body-sm font-body-sm text-on-surface">תנועה חמורות</span>
+</div>
+<span class="font-mono text-label-sm text-secondary font-semibold">1,040</span>
+</label>
+</div>
+</div>
+<!-- 3. Specific Crime Type Select (118 detailed types) -->
+<div class="space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block" for="crimeTypeDropdown">סוג עבירה מפורט (118 קטגוריות)</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface text-body-sm font-body-sm py-1.5 px-space-sm rounded-lg border border-outline-variant/40 appearance-none focus:outline-none focus:border-primary-container" id="crimeTypeDropdown">
+<option value="all">כלל 118 סוגי העבירות המפורטים</option>
+<option value="1">גניבת רכב ופריצה לכלי רכב</option>
+<option value="2">התפרצות לדירה ובתי עסק</option>
+<option value="3">תקיפה חבלנית וחבלה חמורה</option>
+<option value="4">החזקת אמל״ח וסחר בנשק</option>
+<option value="5">הונאה מקוונת וכרטיסי חיוב</option>
+<option value="6">הטרדה מינית ומעשים מגונים</option>
+</select>
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-on-surface-variant text-sm pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- 4. Data Quality / Cleansing Filter Toggle -->
+<div class="pt-2 border-t border-outline-variant/30 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">סינון רשומות ללא שיוך</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">הסתר שגיאות מיפוי (211)</span>
+</div>
+<button class="w-9 h-5 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" id="toggleDataCleansing" type="button">
+<div class="w-4 h-4 rounded-full bg-on-primary-container shadow-sm transform -translate-x-4 transition-transform"></div>
+</button>
+</div>
+</div>
+</aside>
+<!-- SLIDE-OVER CITY / AREA ANALYTICS DRAWER (OPEN ON LEFT SIDE: Drill-down for Netanya) -->
+<aside class="absolute top-16 left-4 z-30 w-96 max-h-[calc(100vh-8.5rem)] flex flex-col bg-surface/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-primary/30 overflow-hidden transition-all duration-300" id="drilldownDrawer">
+<!-- Drawer Header Bar -->
+<div class="p-space-md bg-gradient-to-l from-primary/10 via-surface-container to-surface-container/40 border-b border-outline-variant/30 relative">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">נתניה</span>
+<span class="text-on-surface-variant font-light text-headline-sm">| מרכז העיר ובן ציון</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-xs">shield</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">מרחב שרון • מחוז מרכז • אזור סטטיסטי 14</span>
+</div>
+</div>
+<button class="w-7 h-7 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleDrawer()" title="סגור תחקור" type="button">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+<!-- Severity Banner -->
+<div class="mt-2.5 px-space-sm py-1 rounded-lg bg-pink-500/15 border border-[#EC4899]/30 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#EC4899] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-[#EC4899] font-bold">רמת כוננות: מוקד חם ארצי (HOTSPOT #3)</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">עדכון: 2025</span>
+</div>
+</div>
+<!-- Scrollable Drawer Content -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-4 scrollbar-thin">
+<!-- 4 Tactical KPI Micro-Cards Grid -->
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-low/90 p-2.5 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">סה״כ עבירות</span>
+<span class="material-symbols-outlined text-sm text-primary">analytics</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-mono">842</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">+12.4%</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">מול רבעון קודם</span>
+</div>
+<div class="bg-surface-container-low/90 p-2.5 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">תיקים ייחודיים</span>
+<span class="material-symbols-outlined text-sm text-tertiary">folder_open</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface font-mono">819</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">97.2%</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">יחס תיק לעבירה</span>
+</div>
+<div class="bg-surface-container-low/90 p-2.5 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">% מפשיעה ארצית</span>
+<span class="material-symbols-outlined text-sm text-[#EC4899]">pie_chart</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-[#EC4899] font-mono">6.2%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">דרגה 3</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">מתוך 13,568 עבירות</span>
+</div>
+<div class="bg-surface-container-low/90 p-2.5 rounded-xl border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">עבירה מובילה</span>
+<span class="material-symbols-outlined text-sm text-amber-400">warning</span>
+</div>
+<div class="mt-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface line-clamp-1">גניבת רכב</span>
+<span class="font-label-sm text-label-sm text-amber-400 font-mono">214 אירועים</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80">25.4% מכלל האזור</span>
+</div>
+</div>
+<!-- CRIME GROUP HORIZONTAL DISTRIBUTION BAR CHART -->
+<div class="bg-surface-container-low/70 p-space-md rounded-xl border border-outline-variant/20 space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">התפלגות לפי קבוצת עבירה (נתניה)</span>
+<span class="font-label-sm text-label-sm text-primary">100% מעובד</span>
+</div>
+<!-- Segmented Stack Bar -->
+<div class="w-full h-3 rounded-full bg-surface-container-highest flex overflow-hidden">
+<div class="h-full bg-primary-container" style="width: 44%;" title="רכוש: 44%"></div>
+<div class="h-full bg-amber-400" style="width: 24%;" title="סדר ציבורי: 24%"></div>
+<div class="h-full bg-error" style="width: 18%;" title="נגד גוף: 18%"></div>
+<div class="h-full bg-tertiary" style="width: 8%;" title="מרמה: 8%"></div>
+<div class="h-full bg-[#EC4899]" style="width: 6%;" title="מין ואחר: 6%"></div>
+</div>
+<div class="grid grid-cols-2 gap-y-1.5 gap-x-2 pt-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded bg-primary-container"></span>עבירות רכוש</span>
+<span class="font-mono text-on-surface font-semibold">372 (44%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded bg-amber-400"></span>סדר ציבורי</span>
+<span class="font-mono text-on-surface font-semibold">202 (24%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded bg-error"></span>נגד אדם/גוף</span>
+<span class="font-mono text-on-surface font-semibold">151 (18%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded bg-tertiary"></span>מרמה והונאה</span>
+<span class="font-mono text-on-surface font-semibold">68 (8%)</span>
+</div>
+</div>
+</div>
+<!-- TOP-5 SPECIFIC OFFENSES PROGRESS BARS -->
+<div class="bg-surface-container-low/70 p-space-md rounded-xl border border-outline-variant/20 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">5 עבירות מובילות באזור התחקור</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">מתוך 118 סוגים</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Offense 1 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">1. גניבת כלי רכב מנועי</span>
+<span class="font-mono text-primary font-bold">214</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Offense 2 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">2. התפרצות לעסק ומוסדות</span>
+<span class="font-mono text-amber-400 font-bold">168</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-amber-400 rounded-full" style="width: 67%;"></div>
+</div>
+</div>
+<!-- Offense 3 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">3. תקיפה וחבלה ממשית</span>
+<span class="font-mono text-error font-bold">142</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 56%;"></div>
+</div>
+</div>
+<!-- Offense 4 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">4. גרימת נזק לרכוש בזדון</span>
+<span class="font-mono text-secondary font-bold">115</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Offense 5 -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">5. הונאה בכרטיסי אשראי ומקוון</span>
+<span class="font-mono text-tertiary font-bold">89</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 35%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- QUARTERLY TREND SPARKLINE GRAPH (Q1-Q4) -->
+<div class="bg-surface-container-low/70 p-space-md rounded-xl border border-outline-variant/20 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">מגמה רבעונית שנתית (Q1 - Q4 2025)</span>
+<span class="font-label-sm text-label-sm text-error font-mono flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+            עליה מתמשכת
+          </span>
+</div>
+<div class="h-20 w-full pt-1">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 80">
+<defs>
+<lineargradient id="sparklineGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#38bdf8" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Area Fill -->
+<polygon fill="url(#sparklineGrad)" points="10,65 80,48 170,52 260,18 260,75 10,75"></polygon>
+<!-- Line Stroke -->
+<polyline fill="none" points="10,65 80,48 170,52 260,18" stroke="#38bdf8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data Points -->
+<circle cx="10" cy="65" fill="#38bdf8" r="3.5"></circle>
+<circle cx="80" cy="48" fill="#38bdf8" r="3.5"></circle>
+<circle cx="170" cy="52" fill="#38bdf8" r="3.5"></circle>
+<circle cx="260" cy="18" fill="#ffffff" r="4.5" stroke="#EC4899" stroke-width="2"></circle>
+<!-- Value Labels -->
+<text fill="#87929a" font-family="Rubik" font-size="9" text-anchor="middle" x="10" y="55">180</text>
+<text fill="#87929a" font-family="Rubik" font-size="9" text-anchor="middle" x="80" y="38">205</text>
+<text fill="#87929a" font-family="Rubik" font-size="9" text-anchor="middle" x="170" y="42">213</text>
+<text fill="#EC4899" font-family="Rubik" font-size="10" font-weight="700" text-anchor="middle" x="260" y="11">244</text>
+</svg>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant font-mono px-1">
+<span>Q1-2025</span>
+<span>Q2-2025</span>
+<span>Q3-2025</span>
+<span class="text-primary font-bold">Q4-2025 (נוכחי)</span>
+</div>
+</div>
+</div>
+<!-- DRAWER ACTION FOOTER -->
+<div class="p-space-md bg-surface-container/90 border-t border-outline-variant/30 flex items-center gap-2">
+<a class="flex-1 py-2 px-space-sm rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-1.5 transition-colors shadow-md text-center" data-path="cross-regional-comparison-studio" href="#">
+<span class="material-symbols-outlined text-base">compare_arrows</span>
+<span>העבר לסטודיו השוואה</span>
+</a>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors border border-outline-variant/30" title="ייצוא דוח PDF מפורט" type="button">
+<span class="material-symbols-outlined text-sm text-primary">picture_as_pdf</span>
+<span>דוח PDF</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- INTERACTIVE BEHAVIOR SCRIPTS -->
+<script>
+  function focusHotspot(cityName) {
+    const drawer = document.getElementById('drilldownDrawer');
+    if (drawer) {
+      drawer.classList.remove('opacity-0', 'pointer-events-none', '-translate-x-full');
+    }
+  }
+
+  function toggleDrawer() {
+    const drawer = document.getElementById('drilldownDrawer');
+    if (drawer) {
+      drawer.classList.toggle('-translate-x-full');
+      drawer.classList.toggle('pointer-events-none');
+    }
+  }
+
+  // Tilt and rotate controls
+  const groundPlane = document.getElementById('ground-plane');
+  let currentTilt = 46;
+  let isRotating = false;
+
+  document.getElementById('btnTiltToggle')?.addEventListener('click', () => {
+    currentTilt = currentTilt === 46 ? 10 : 46;
+    if (groundPlane) {
+      groundPlane.setAttribute('transform', `perspective(900) rotateX(${currentTilt}deg) rotateZ(-12deg) translate(80, -220) scale(1.18)`);
+    }
+  });
+
+  document.getElementById('btnResetNorth')?.addEventListener('click', () => {
+    currentTilt = 46;
+    if (groundPlane) {
+      groundPlane.setAttribute('transform', `perspective(900) rotateX(46deg) rotateZ(0deg) translate(80, -220) scale(1.18)`);
+    }
+  });
+
+  // Layer switches
+  document.getElementById('toggle3DColumns')?.addEventListener('click', function() {
+    this.classList.toggle('bg-surface-container-high');
+    this.classList.toggle('text-primary');
+  });
+
+  document.getElementById('toggleHeatmap')?.addEventListener('click', function() {
+    this.classList.toggle('bg-surface-container-high');
+    this.classList.toggle('text-primary');
+  });
+
+  // View modes
+  document.getElementById('viewMunicipalBtn')?.addEventListener('click', function() {
+    this.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+    this.classList.remove('text-on-surface-variant');
+    const pol = document.getElementById('viewPoliceBtn');
+    pol.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+    pol.classList.add('text-on-surface-variant');
+  });
+
+  document.getElementById('viewPoliceBtn')?.addEventListener('click', function() {
+    this.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+    this.classList.remove('text-on-surface-variant');
+    const mun = document.getElementById('viewMunicipalBtn');
+    mun.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+    mun.classList.add('text-on-surface-variant');
+  });
+</script>
+<script>
+  document.querySelectorAll('a[data-path]').forEach(link => {
+    const page = {
+      '3d-map-regional-investigation': 'code1.html',
+      'national-trends-intelligence-dashboard': 'code2.html',
+      'cross-regional-comparison-studio': 'code3.html'
+    }[link.dataset.path];
+    if (page) link.href = page;
+  });
+
+  fetch('/api/summary')
+    .then(response => response.ok ? response.json() : Promise.reject())
+    .then(data => {
+      document.querySelectorAll('[data-live-crime-count]').forEach(el => el.textContent = data.incidents.toLocaleString('he-IL'));
+    })
+    .catch(() => {});
+</script>
+</main></div><footer class="fixed bottom-0 inset-x-0 h-7 bg-surface-container-lowest/95 backdrop-blur-md z-50 flex items-center justify-between px-gutter-lg border-t border-outline-variant/40 shadow-[0_-1px_6px_rgba(0,0,0,0.5)]"><div class="flex items-center gap-space-lg text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>מרכז שליטה פעיל</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-space-xs"><span>מסננים פעילים:</span><span class="text-primary">כלל המחוזות • שנת 2025 • כל סוגי העבירות</span></div><span class="text-outline-variant">|</span><div class="flex items-center gap-space-xs"><span>סך עבירות ארצי מעובד:</span><span class="text-tertiary font-bold font-mono">13,568</span></div></div><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-xs text-outline">sync</span><span>עודכן לאחרונה: <span class="text-on-surface font-mono">14:32:05</span></span></div><span class="text-outline-variant">|</span><span>משטרת ישראל © 2025</span></div></footer></body></html>
